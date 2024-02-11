@@ -1,0 +1,23 @@
+{
+  "NewLoanApplicationRequest": {
+    "ApplicantDetails": {
+      "name": "Sagnik Chakraborty",
+      "Address": {
+        "locality": "Sector 5",
+        "city": "New Panvel",
+        "state": "Maharashtra",
+        "pinCode": "410206",
+        "region": "Urban"
+      },
+      "phoneNumber": "9765432123",
+      "emailAddress": "sagnik@gmail.com",
+      "annualIncome": 400000
+    },
+    "ApplicantLoanDetails": {
+      "loanAmount": 600000,
+      "loanTermMonths": 24,
+      "loanType": "Personal",
+      "creditScore": 750
+    }
+  }
+}

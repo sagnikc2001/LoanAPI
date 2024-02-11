@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:camel="http://camel.apache.org/schema/spring"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+						http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- bean definitions go here -->
+	<bean class="com.alahli.middleware.utility.bean.ErrorsService" id="oErrorsService"/>
+    <bean class="com.alahli.middleware.utility.dao.ConfigStoreReaderDao" id="oConfigStoreReader"/>
+    <bean class="com.alahli.middleware.utility.dao.cache.CacheDao" id="oCacheService"/>
+    <bean class="com.alahli.middleware.utility.route.UtilityRouteBuilder" id="oUtilityRouteBuilder"/>
+    <bean class="com.alahli.middleware.utility.Utils.Utils" id="utils"/>
+    <bean class="com.alahli.middleware.utility.Utils.Utils" id="oUtils"/>
+    <bean class="com.alahli.middleware.utility.Utils.StringUtil" id="oStringUtil"/>
+    <bean class="com.alahli.middleware.utility.Utils.DateUtil" id="oDateUtil"/>
+    <bean class="com.alahli.middleware.utility.Utils.NumberUtil" id="oNumberUtil"/>
+    <bean class="com.alahli.middleware.utility.Utils.ConfigStoreUtil" id="oConfigStoreUtil"/>
+    <bean class="com.alahli.middleware.utility.encryption.EncryptionHandler" id="oEncryptionHandler"/>
+    <bean class="com.alahli.middleware.utility.dao.BancsRegionDao" id="oBancsRegionDao" lazy-init="true"/>
+
+</beans>

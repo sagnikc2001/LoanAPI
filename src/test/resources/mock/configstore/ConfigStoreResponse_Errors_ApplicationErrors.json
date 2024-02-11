@@ -1,0 +1,76 @@
+{
+    "GetConfigStoreDataResponse": {
+        "category": "Errors",
+        "fileName": "applicationErrors.json",
+        "content": {
+            "ApplicationErrors": {
+                "MISSINGTAG": {
+                    "errorCode": 4,
+                    "errorDesc": "Missing Tag",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "INCORRECTVALUE": {
+                    "errorCode": 1,
+                    "errorDesc": "Incorrect value",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "MANDATORYVALUE": {
+                    "errorCode": 612,
+                    "errorDesc": "Mandatory Value is missing",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "RECORDNOTFOUND_CORTEX": {
+                    "errorCode": 30,
+                    "errorDesc": "Record not found",
+                    "system": "CORTEX",
+                    "timer": 10
+                },
+                "RECORDNOTFOUND": {
+                    "errorCode": 30,
+                    "errorDesc": "Record not found",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "RECORDNOTFOUND_ODS": {
+                    "errorCode": 30,
+                    "errorDesc": "Record not found",
+                    "system": "ODS",
+                    "timer": 10
+                },
+                "SMS_NOTIFICATION_ERROR": {
+                    "errorCode": 254,
+                    "errorDesc": "Exception occured while sending SMS",
+                    "system": "SMS",
+                    "timer": 10
+                },
+                "ILLEGALACCOUNTID": {
+                    "errorCode": 38,
+                    "errorDesc": "Illegal Account ID",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "ILLEGALCREDITCARDNUMBER": {
+                    "errorCode": 347,
+                    "errorDesc": "Illegal Credit Card Number",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "ACCOUNTCLOSED": {
+                    "errorCode": 36,
+                    "errorDesc": "Account is closed",
+                    "system": "MW",
+                    "timer": 10
+                },
+                "RECORDNOTFOUND_FILENET": {
+                    "errorCode": 30,
+                    "errorDesc": "Record not found",
+                    "system": "FILENET",
+                    "timer": 10
+                }
+            }
+        }
+    }
+}

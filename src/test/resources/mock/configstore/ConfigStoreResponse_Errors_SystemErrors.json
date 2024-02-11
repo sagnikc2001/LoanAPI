@@ -1,0 +1,757 @@
+{
+    "GetConfigStoreDataResponse": {
+        "category": "Errors",
+        "fileName": "systemErrors.json",
+        "content": {
+            "SystemErrors": {
+                "Source": {
+                    "BANCSAPPERROR": {
+                        "errorCode": 37,
+                        "errorDesc": "BANCS error occurred",
+                        "system": "BANCS",
+                        "timer": 10
+                    },
+                    "BANCSDBERROR": {
+                        "errorCode": 41,
+                        "errorDesc": "BANCS Database Error",
+                        "system": "BANCS",
+                        "timer": 10
+                    },
+                    "BANCSDBTIMEOUT": {
+                        "errorCode": 75,
+                        "errorDesc": "Bancs Time Out",
+                        "system": "BANCS",
+                        "timer": 10
+                    },
+                    "BANCSAPPTIMEOUT": {
+                        "errorCode": 291,
+                        "errorDesc": "Bancs Application Time Out",
+                        "system": "BANCS",
+                        "timer": 10
+                    },
+                    "VISION": {
+                        "errorCode": 622,
+                        "errorDesc": "Vision Plus Application Timeout",
+                        "system": "VISION+",
+                        "timer": 10
+                    },
+                    "MWACTIVITYERROR": {
+                        "errorCode": 621,
+                        "errorDesc": "General Error, Please check Native Description",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "MWACTIVITYTIMEOUT": {
+                        "errorCode": 623,
+                        "errorDesc": "Service Timeout",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "CCRERROR": {
+                        "errorCode": 133,
+                        "errorDesc": "CCR General Error",
+                        "system": "CCR",
+                        "timer": 10
+                    },
+                    "CCRTIMEOUT": {
+                        "errorCode": 314,
+                        "errorDesc": "CCR Wrapper Has Time Out",
+                        "system": "CCR",
+                        "timer": 10
+                    },
+                    "EAITIMEOUT": {
+                        "errorCode": 82,
+                        "errorDesc": "EAI Time Out",
+                        "system": "EAI",
+                        "timer": 10
+                    },
+                    "EAIERROR": {
+                        "errorCode": 288,
+                        "errorDesc": "EAI Oracle Database Error",
+                        "system": "EAI",
+                        "timer": 10
+                    },
+                    "MWTIMEOUT": {
+                        "errorCode": 82,
+                        "errorDesc": "MW Wrapper Service Time Out",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "MWERROR": {
+                        "errorCode": 154,
+                        "errorDesc": "MW Service ERROR",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "VISIONTIMEOUT": {
+                        "errorCode": 622,
+                        "errorDesc": "Vision Plus Application Timeout",
+                        "system": "VISION+",
+                        "timer": 10
+                    },
+                    "VISIONERROR": {
+                        "errorCode": 625,
+                        "errorDesc": "Vision Plus Connection Error",
+                        "system": "VISION+",
+                        "timer": 10
+                    },
+                    "Base24ERROR": {
+                        "errorCode": 626,
+                        "errorDesc": "Base24 Connection Error",
+                        "system": "BASE24",
+                        "timer": 10
+                    },
+                    "Base24TIMEOUT": {
+                        "errorCode": 630,
+                        "errorDesc": "Base24 Time Out",
+                        "system": "BASE24",
+                        "timer": 10
+                    },
+                    "ERPERROR": {
+                        "errorCode": 627,
+                        "errorDesc": "ERP Service Error",
+                        "system": "ERP",
+                        "timer": 10
+                    },
+                    "ERPTIMEOUT": {
+                        "errorCode": 628,
+                        "errorDesc": "ERP Time Out",
+                        "system": "ERP",
+                        "timer": 10
+                    },
+                    "NBSMERROR": {
+                        "errorCode": 630,
+                        "errorDesc": "NBSM Application Error",
+                        "system": "NBSM",
+                        "timer": 10
+                    },
+                    "ENTRUSTERROR": {
+                        "errorCode": 437,
+                        "errorDesc": "ENTRUST Error",
+                        "system": "ENTRUST",
+                        "timer": 10
+                    },
+                    "ENTRUSTTIMEOUT": {
+                        "errorCode": 632,
+                        "errorDesc": "ENTRUST Time Out",
+                        "system": "ENTRUST",
+                        "timer": 10
+                    },
+                    "SMSERROR": {
+                        "errorCode": 432,
+                        "errorDesc": "SMS Error",
+                        "system": "SMS",
+                        "timer": 10
+                    },
+                    "SMSTIMEOUT": {
+                        "errorCode": 310,
+                        "errorDesc": "SMS Time Out",
+                        "system": "SMS",
+                        "timer": 10
+                    },
+                    "AOLDBERROR": {
+                        "errorCode": 223,
+                        "errorDesc": "AOL DB Error",
+                        "system": "AOLDB",
+                        "timer": 10
+                    },
+                    "AOLDBTIMEOUT": {
+                        "errorCode": 633,
+                        "errorDesc": "AOLDB Time Out",
+                        "system": "AOLDB",
+                        "timer": 10
+                    },
+                    "CARONTEERROR": {
+                        "errorCode": 606,
+                        "errorDesc": "CARONTE Error",
+                        "system": "CARONTE",
+                        "timer": 10
+                    },
+                    "CARONTETIMEOUT": {
+                        "errorCode": 634,
+                        "errorDesc": "CARONTE Time Out",
+                        "system": "CARONTE",
+                        "timer": 10
+                    },
+                    "SIEBELTIMEOUT": {
+                        "errorCode": 646,
+                        "errorDesc": "SIEBEL Application Timeout",
+                        "system": "SIEBEL",
+                        "timer": 10
+                    },
+                    "SIEBELERROR": {
+                        "errorCode": 647,
+                        "errorDesc": "SIEBEL Application Error",
+                        "system": "SIEBEL",
+                        "timer": 10
+                    },
+                    "LOSTIMEOUT": {
+                        "errorCode": 648,
+                        "errorDesc": "LOS TIME OUT",
+                        "system": "LOS",
+                        "timer": 10
+                    },
+                    "LOSERROR": {
+                        "errorCode": 649,
+                        "errorDesc": "LOS Application Error",
+                        "system": "LOS",
+                        "timer": 10
+                    },
+                    "IVRTIMEOUT": {
+                        "errorCode": 659,
+                        "errorDesc": "IVR Time Out",
+                        "system": "IVR",
+                        "timer": 10
+                    },
+                    "IVRERROR": {
+                        "errorCode": 660,
+                        "errorDesc": "IVR Application Error",
+                        "system": "IVR",
+                        "timer": 10
+                    },
+                    "ALELMERROR": {
+                        "errorCode": 670,
+                        "errorDesc": "ALELM Application Error",
+                        "system": "ALELM",
+                        "timer": 10
+                    },
+                    "APEXERROR": {
+                        "errorCode": 640,
+                        "errorDesc": "APEX Error",
+                        "system": "APEX",
+                        "timer": 10
+                    },
+                    "APEXTIMEOUT": {
+                        "errorCode": 641,
+                        "errorDesc": "APEX Time Out",
+                        "system": "APEX",
+                        "timer": 10
+                    },
+                    "CISCOERROR": {
+                        "errorCode": 674,
+                        "errorDesc": "CISCO Application Error",
+                        "system": "CISCO",
+                        "timer": 10
+                    },
+                    "CISCOTIMEOUT": {
+                        "errorCode": 675,
+                        "errorDesc": "CISCO Application Error",
+                        "system": "CISCO",
+                        "timer": 10
+                    },
+                    "CISCO_NO_RECORDS_FOUND": {
+                        "errorCode": 679,
+                        "errorDesc": "No Records Found",
+                        "system": "CISCO",
+                        "timer": 10
+                    },
+                    "TRADEX_ERROR": {
+                        "errorCode": 676,
+                        "errorDesc": "Tradex Application Error",
+                        "system": "Tradex",
+                        "timer": 10
+                    },
+                    "TRADEX_NO_DATA_ERROR": {
+                        "errorCode": 677,
+                        "errorDesc": "Tradex No Data Error",
+                        "system": "Tradex",
+                        "timer": 10
+                    },
+                    "MISSING_TAG_ERROR": {
+                        "errorCode": 4,
+                        "errorDesc": "Missing Tag Error",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "MWERR_ACCOUNTCLOSED": {
+                        "errorCode": 680,
+                        "errorDesc": "Account Closed",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "MWERR_ACCOUNTFROZEN": {
+                        "errorCode": 681,
+                        "errorDesc": "Account Frozen",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "MWERR_BADAMOUNT": {
+                        "errorCode": 682,
+                        "errorDesc": "No balance",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "INVESTMENT_SUB": {
+                        "errorCode": 683,
+                        "errorDesc": "Subscription Error",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "INVESTMENT_CANCEL": {
+                        "errorCode": 684,
+                        "errorDesc": "Cancel Subscription Error",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "NORKOMERROR": {
+                        "errorCode": 680,
+                        "errorDesc": "NORKOM Application Error",
+                        "system": "NORKOM",
+                        "timer": 10
+                    },
+                    "NORKOMTIMEOUT": {
+                        "errorCode": 681,
+                        "errorDesc": "NORKOM Application Error",
+                        "system": "NORKOM",
+                        "timer": 10
+                    },
+                    "NAFITHERROR": {
+                        "errorCode": 687,
+                        "errorDesc": "NAFITH Application Error",
+                        "system": "NAFITH",
+                        "timer": 10
+                    },
+                    "NAFITHTIMEOUT": {
+                        "errorCode": 688,
+                        "errorDesc": "NAFITH Time Out",
+                        "system": "NAFITH",
+                        "timer": 10
+                    },
+                    "WATHIQTIMEOUT": {
+                        "errorCode": 686,
+                        "errorDesc": "WATHIQ Application Error",
+                        "system": "WAHTIQ",
+                        "timer": 10
+                    },
+                    "WATHIQERROR": {
+                        "errorCode": 685,
+                        "errorDesc": "WAHTIQ Syterm Error",
+                        "system": "WAHTIQ",
+                        "timer": 10
+                    },
+                    "SIMAHERROR": {
+                        "errorCode": 672,
+                        "errorDesc": "SIMAH Application Error",
+                        "system": "SIMAH",
+                        "timer": 10
+                    },
+                    "SIMAHTIMEOUT": {
+                        "errorCode": 673,
+                        "errorDesc": "SIMAH Application Error",
+                        "system": "SIMAH",
+                        "timer": 10
+                    },
+                    "B2BERROR": {
+                        "errorCode": 643,
+                        "errorDesc": "B2B Error",
+                        "system": "B2B",
+                        "timer": 10
+                    },
+                    "B2BTIMEOUT": {
+                        "errorCode": 644,
+                        "errorDesc": "B2B Time Out",
+                        "system": "B2B",
+                        "timer": 10
+                    },
+                    "B2BGATEWAYERROR": {
+                        "errorCode": 661,
+                        "errorDesc": "B2B Gateway Error",
+                        "system": "B2B",
+                        "timer": 10
+                    },
+                    "B2BGATEWAYTIMEOUT": {
+                        "errorCode": 662,
+                        "errorDesc": "B2B Gateway Timeoutr",
+                        "system": "B2B",
+                        "timer": 10
+                    },
+                    "CORTEXERROR": {
+                        "errorCode": 666,
+                        "errorDesc": "Cortex Error",
+                        "system": "CORTEX",
+                        "timer": 10
+                    },
+                    "CORTEXTIMEOUT": {
+                        "errorCode": 667,
+                        "errorDesc": "Cortex Timeout",
+                        "system": "CORTEX",
+                        "timer": 10
+                    },
+                    "DENYSTANDINGORDERERROR": {
+                        "errorCode": 38,
+                        "errorDesc": "Validation Error",
+                        "system": "CORDYS",
+                        "timer": 10
+                    },
+                    "PEERROR": {
+                        "errorCode": 636,
+                        "errorDesc": "PAYMENT ENGINE Error",
+                        "system": "PAYMENT ENGINE",
+                        "timer": 10
+                    },
+                    "PETIMEOUT": {
+                        "errorCode": 637,
+                        "errorDesc": "PAYMENT ENGINE Time Out",
+                        "system": "PAYMENT ENGINE",
+                        "timer": 10
+                    },
+                    "HPSM_DATA_ERROR": {
+                        "errorCode": 705,
+                        "errorDesc": "HPSM no data error",
+                        "system": "HPSM",
+                        "timer": 10
+                    },
+                    "HPSM_SERVICE_ERROR": {
+                        "errorCode": 706,
+                        "errorDesc": "Failure from HPSM system",
+                        "system": "HPSM",
+                        "timer": 10
+                    },
+                    "ODCTIMEOUT": {
+                        "errorCode": 689,
+                        "errorDesc": "ODC Application Error",
+                        "system": "ODC",
+                        "timer": 10
+                    },
+                    "ODCERROR": {
+                        "errorCode": 690,
+                        "errorDesc": "ODC System Error",
+                        "system": "ODC",
+                        "timer": 10
+                    },
+                    "CHANNELNOTALLOWEDERROR": {
+                        "errorCode": 721,
+                        "errorDesc": "Service is not allowed for this Channel",
+                        "system": "CORDYS",
+                        "timer": 10
+                    },
+                    "BANCS_CALL": {
+                        "errorCode": 707,
+                        "errorDesc": "Application/System failure from Loan Module",
+                        "system": "MW"
+                    },
+                    "XVATTIMEOUT": {
+                        "errorCode": 691,
+                        "errorDesc": "XVAT Application Error",
+                        "system": "XVAT",
+                        "timer": 10
+                    },
+                    "XVATERROR": {
+                        "errorCode": 692,
+                        "errorDesc": "XVAT System Error",
+                        "system": "XVAT",
+                        "timer": 10
+                    },
+                    "AOLEGAINERROR": {
+                        "errorCode": 693,
+                        "errorDesc": "AOL EGain Errors",
+                        "system": "AOL",
+                        "timer": 10
+                    },
+                    "AOLEGAINTIMEOUT": {
+                        "errorCode": 694,
+                        "errorDesc": "AOL EGain Timeout",
+                        "system": "AOL",
+                        "timer": 10
+                    },
+                    "OLP_RESET_PWD": {
+                        "errorCode": 695,
+                        "errorDesc": "Error while resetting the password",
+                        "system": "MW",
+                        "timer": 10
+                    },
+                    "MQTIMEOUT": {
+                        "errorCode": 698,
+                        "errorDesc": "MQ Timeout Error",
+                        "system": "MQ",
+                        "timer": 10
+                    },
+                    "MQERROR": {
+                        "errorCode": 699,
+                        "errorDesc": "MQ Error",
+                        "system": "MQ",
+                        "timer": 10
+                    },
+                    "DWHAPPERROR": {
+                        "errorCode": 702,
+                        "errorDesc": "DWH error occurred",
+                        "system": "DWH",
+                        "timer": 10
+                    },
+                    "DWHAPPTIMEOUT": {
+                        "errorCode": 703,
+                        "errorDesc": "DWH Time Out",
+                        "system": "DWH",
+                        "timer": 10
+                    },
+                    "SigCapAPPERROR": {
+                        "errorCode": 711,
+                        "errorDesc": "SigCap error occurred",
+                        "system": "SigCap",
+                        "timer": 10
+                    },
+                    "ODSERROR": {
+                        "errorCode": 709,
+                        "errorDesc": "ODS Application Error",
+                        "system": "ODS"
+                    },
+                    "ODSTIMEOUT": {
+                        "errorCode": 710,
+                        "errorDesc": "ODS Time out",
+                        "system": "ODS"
+                    },
+                    "SigCapAPPTIMEOUT": {
+                        "errorCode": 712,
+                        "errorDesc": "SigCap Time Out",
+                        "system": "SigCap",
+                        "timer": 10
+                    },
+                    "TSBERROR": {
+                        "errorCode": 614,
+                        "errorDesc": "TSB Error",
+                        "system": "TSB",
+                        "timer": 10
+                    },
+                    "TSBTIMEOUT": {
+                        "errorCode": 642,
+                        "errorDesc": "TSB Time Out",
+                        "system": "TSB",
+                        "timer": 10
+                    },
+                    "ETSERROR": {
+                        "errorCode": 711,
+                        "errorDesc": "ETS Application Error",
+                        "system": "ETS"
+                    },
+                    "ETSTIMEOUT": {
+                        "errorCode": 712,
+                        "errorDesc": "ETS Time out",
+                        "system": "ETS"
+                    },
+                    "BTTIMEOUT": {
+                        "errorCode": 715,
+                        "errorDesc": "BT Timeout Error",
+                        "system": "Bank Trade",
+                        "timer": 10
+                    },
+                    "BTERROR": {
+                        "errorCode": 714,
+                        "errorDesc": "BT Error",
+                        "system": "Bank Trade",
+                        "timer": 10
+                    },
+                    "ECORPERROR": {
+                        "errorCode": 716,
+                        "errorDesc": "Ecorp Error",
+                        "system": "ECORP",
+                        "timer": 10
+                    },
+                    "ECORPTIMEOUT": {
+                        "errorCode": 717,
+                        "errorDesc": "Ecorp Timeout",
+                        "system": "ECORP",
+                        "timer": 10
+                    },
+                    "MUREXTIMEOUT": {
+                        "errorCode": 722,
+                        "errorDesc": "MUREX Timeout Error",
+                        "system": "MUREX",
+                        "timer": 10
+                    },
+                    "MUREXERROR": {
+                        "errorCode": 723,
+                        "errorDesc": "MUREX Error",
+                        "system": "MUREX",
+                        "timer": 10
+                    },
+                    "CCSTIMEOUT": {
+                        "errorCode": 718,
+                        "errorDesc": "CCS Timeout Error",
+                        "system": "Bank Trade",
+                        "timer": 10
+                    },
+                    "CCSERROR": {
+                        "errorCode": 719,
+                        "errorDesc": "CCS Error",
+                        "system": "Bank Trade",
+                        "timer": 10
+                    },
+                    "STATEMENTENGINETIMEOUT": {
+                        "errorCode": 724,
+                        "errorDesc": "Statement Engine Timeout",
+                        "system": "STATEMENTENGINE",
+                        "timer": 10
+                    },
+                    "STATEMENTENGINEERROR": {
+                        "errorCode": 725,
+                        "errorDesc": "Statement Engine Error",
+                        "system": "STATEMENTENGINE",
+                        "timer": 10
+                    },
+                    "CMSTIMEOUT": {
+                        "errorCode": 669,
+                        "errorDesc": "CMS Timeout",
+                        "system": "CMS",
+                        "timer": 10
+                    },
+                    "CMSERROR": {
+                        "errorCode": 670,
+                        "errorDesc": "CMS Error",
+                        "system": "CMS",
+                        "timer": 10
+                    },
+                    "CMS_INVALID_RESPONSE": {
+                        "errorCode": 671,
+                        "errorDesc": "Response is not valid for requested account",
+                        "system": "CMS",
+                        "timer": 10
+                    },
+                    "FILENETTIMEOUT": {
+                        "errorCode": 729,
+                        "errorDesc": "FileNet Timeout",
+                        "system": "FileNet",
+                        "timer": 10
+                    },
+                    "FILENETERROR": {
+                        "errorCode": 730,
+                        "errorDesc": "FileNet Application Error",
+                        "system": "FileNet",
+                        "timer": 10
+                    },
+                    "AOLVDDTIMEOUT": {
+                        "errorCode": 731,
+                        "errorDesc": "AOL VDD Timeout",
+                        "system": "AOL",
+                        "timer": 10
+                    },
+                    "AOLVDDERROR": {
+                        "errorCode": 732,
+                        "errorDesc": "AOL VDD Application Error",
+                        "system": "AOL",
+                        "timer": 10
+                    },
+                    "DATAMARTERROR": {
+                        "errorCode": 734,
+                        "errorDesc": "DATAMART Application Error",
+                        "system": "DATAMART",
+                        "timer": 10
+                    },
+                    "DATAMARTTIMEOUT": {
+                        "errorCode": 735,
+                        "errorDesc": "DATAMART Timeout",
+                        "system": "DATAMART",
+                        "timer": 10
+                    },
+                    "NCBCAlahliCapitalTIMEOUT": {
+                        "errorCode": 736,
+                        "errorDesc": "NCBC Alahli Capital Timeout",
+                        "system": "NCBC Alahli Capital",
+                        "timer": 10
+                    },
+                    "NCBCAlahliCapitalERROR": {
+                        "errorCode": 737,
+                        "errorDesc": "NCBC Alahli Capital Application Error",
+                        "system": "NCBC Alahli Capital",
+                        "timer": 10
+                    },
+                    "MarketPlaceTIMEOUT": {
+                        "errorCode": 738,
+                        "errorDesc": "Market Place Timeout",
+                        "system": "MarketPlace",
+                        "timer": 10
+                    },
+                    "MarketPlaceERROR": {
+                        "errorCode": 739,
+                        "errorDesc": "Market Place Application Error",
+                        "system": "MarketPlace",
+                        "timer": 10
+                    },
+                    "ILMTIMEOUT": {
+                        "errorCode": 740,
+                        "errorDesc": "ILM Timeout",
+                        "system": "ILM",
+                        "timer": 10
+                    },
+                    "ILMERROR": {
+                        "errorCode": 741,
+                        "errorDesc": "ILM Application Error",
+                        "system": "ILM",
+                        "timer": 10
+                    },
+                    "AOLRESTTIMEOUT": {
+                        "errorCode": 742,
+                        "errorDesc": "AOL Timeout",
+                        "system": "AOL",
+                        "timer": 10
+                    },
+                    "AOLRESTERROR": {
+                        "errorCode": 743,
+                        "errorDesc": "AOL Application Error",
+                        "system": "AOL",
+                        "timer": 10
+                    },
+                    "TMSTIMEOUT": {
+                        "errorCode": 744,
+                        "errorDesc": "TMS Timeout",
+                        "system": "TMS",
+                        "timer": 10
+                    },
+                    "TMSERROR": {
+                        "errorCode": 743,
+                        "errorDesc": "TMS Error",
+                        "system": "TMS",
+                        "timer": 10
+                    },
+                    "CPSTIMEOUT": {
+                        "errorCode": 746,
+                        "errorDesc": "CPS Timeout",
+                        "system": "CPS",
+                        "timer": 10
+                    },
+                    "CPSERROR": {
+                        "errorCode": 745,
+                        "errorDesc": "CPS Application Error",
+                        "system": "CPS",
+                        "timer": 10
+                    },
+                    "ICUSTODYCMSTIMEOUT": {
+                        "errorCode": 751,
+                        "errorDesc": "iCustody CMS Timeout",
+                        "system": "iCustody CMS",
+                        "timer": 10
+                    },
+                    "ICUSTODYCMSERROR": {
+                        "errorCode": 752,
+                        "errorDesc": "iCustody CMSApplication Error",
+                        "system": "iCustody CMS",
+                        "timer": 10
+                    },
+                    "LOYALTYTIMEOUT": {
+                        "errorCode": 753,
+                        "errorDesc": "Loyalty Timeout",
+                        "system": "Loyalty",
+                        "timer": 10
+                    },
+                    "LOYALTYERROR": {
+                        "errorCode": 754,
+                        "errorDesc": "Loyalty Error",
+                        "system": "Loyalty",
+                        "timer": 10
+                    },
+                    "REMITTANCEERROR": {
+                        "errorCode": 767,
+                        "errorDesc": "REMITTANCE Application Error",
+                        "system": "REMITTANCE",
+                        "timer": 10
+                    },
+                    "REMITTANCETIMEOUT": {
+                        "errorCode": 768,
+                        "errorDesc": "REMITTANCE Application Timeout",
+                        "system": "REMITTANCE",
+                        "timer": 10
+                    }
+                }
+            }
+        }
+    }
+}

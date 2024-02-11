@@ -1,0 +1,10 @@
+{
+  "NewLoanApplicationResponse": {
+    "status": "Accepted",
+    "LoanAccountDetails": {
+      "accountNumber": "1000000008",
+      "interestRate": 8,
+      "loanAmount": 200000
+    }
+  }
+}

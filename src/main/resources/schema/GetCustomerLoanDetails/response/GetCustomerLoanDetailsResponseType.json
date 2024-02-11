@@ -1,0 +1,26 @@
+{
+  "GetLoanDetailsResponse": {
+    "CustomerInfo": {
+      "name": "string",
+      "CustomerAddress": {
+        "location": "string",
+        "city": "string",
+        "state": "string",
+        "pinCode": "string",
+        "region": "string"
+      },
+      "phoneNumber": "string",
+      "emailAddress": "string",
+      "annualIncome": 0
+    },
+    "CustomerLoanInfo": {
+      "loanAccountNumber": 0,
+      "loanStatus": "string",
+      "loanInterestRate": 0,
+      "loanAmount": 0,
+      "loanTerm": 0,
+      "loanType": "string",
+      "creditScore": 0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+#To Change from /camel to / in url
+camel:
+  springboot:
+    name: LoanAPIs
+  servlet:
+    mapping:
+      context-path: /*
+  rest:
+    context-path: /
+    
+server:
+  port: 8081
+  
+#loanAPI:
+#  host : ${LOAN_DB_HOST}
+#  contextPath : ${LOAN_DB_CONTEXTPATH}
