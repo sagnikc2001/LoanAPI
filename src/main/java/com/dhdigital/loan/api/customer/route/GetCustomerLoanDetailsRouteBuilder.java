@@ -53,8 +53,7 @@ public class GetCustomerLoanDetailsRouteBuilder extends RouteBuilder{
 				.to("bean:utils?method=prepareFaultNodeStr(\"GetLoanDetailsResponse\",\"INCORRECTVALUE\",\"accountNumber Field is not correct\",\"\",\"\",\"validationsCust\",${exchange})")
 			
 		.otherwise()	
-//			.to("{{loanAPI.host}}{{loanAPI.contextPath}}GetLoanDetails?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/GetLoanDetails?bridgeEndpoint=true
-			.to("https://9b66fe71-04de-4d62-a371-7b362d126391.mock.pstmn.io/api/customer/v1/GetCustomerLoanDetails?bridgeEndpoint=true")
+			.to("{{loanAPI.host}}{{loanAPI.contextPath}}GetLoanDetails?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/GetLoanDetails?bridgeEndpoint=true
 			.log("Response Body - ${body}")
 			.choice()
 			

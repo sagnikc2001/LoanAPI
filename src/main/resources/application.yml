@@ -11,6 +11,6 @@ camel:
 server:
   port: 8081
   
-#loanAPI:
-#  host : ${LOAN_DB_HOST}
-#  contextPath : ${LOAN_DB_CONTEXTPATH}
+loanAPI:
+  host : ${LOAN_DB_HOST}
+  contextPath : ${LOAN_DB_CONTEXTPATH}

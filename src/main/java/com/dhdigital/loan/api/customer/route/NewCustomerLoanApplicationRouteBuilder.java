@@ -43,22 +43,37 @@ public class NewCustomerLoanApplicationRouteBuilder extends RouteBuilder{
 		.log("Request Body - ${body}")
 		.choice()
 		
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.fullName == null || @.PersonalDetails.Applicant.fullName == '' || @.PersonalDetails.Applicant.phoneNumber == null || @.PersonalDetails.Applicant.phoneNumber == '' || @.PersonalDetails.Applicant.emailAddress == null || @.PersonalDetails.Applicant.emailAddress == '' || @.PersonalDetails.Applicant.Address.location == null || @.PersonalDetails.Applicant.Address.location == '' || @.PersonalDetails.Applicant.Address.city == null || @.PersonalDetails.Applicant.Address.city == '' || @.PersonalDetails.Applicant.Address.state == null || @.PersonalDetails.Applicant.Address.state == '' || @.PersonalDetails.Applicant.Address.pinCode == null || @.PersonalDetails.Applicant.Address.pinCode == '' || @.PersonalDetails.Applicant.Address.region == null || @.PersonalDetails.Applicant.Address.region == '' || @.PersonalDetails.Applicant.annualSalary == null || @.PersonalDetails.Applicant.annualSalary == 0 || @.LoanDetails.loanAmount == null || @.LoanDetails.loanAmount == 0 || @.LoanDetails.loanTerm == null || @.LoanDetails.loanTerm == 0 || @.LoanDetails.creditScore == null || @.LoanDetails.creditScore == 0)]") // Typechecking if any field is null or empty
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"Field either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.fullName == null || @.PersonalDetails.Applicant.fullName == '')]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"fullName either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")
+				
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.phoneNumber == null || @.PersonalDetails.Applicant.phoneNumber == '')]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"phoneNumber either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")	
+				
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.annualSalary == null || @.PersonalDetails.Applicant.annualSalary == 0)]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"annualSalary either null or 0\",\"\",\"\",\"validationsCust\",${exchange})")		
+				
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.loanAmount == null || @.LoanDetails.loanAmount == 0)]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"loanAmount either null or 0\",\"\",\"\",\"validationsCust\",${exchange})")
+				
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.loanType == null || @.LoanDetails.loanType == '')]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"loanType either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")	
+				
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.creditScore == null || @.LoanDetails.creditScore == 0)]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"creditScore either null or 0\",\"\",\"\",\"validationsCust\",${exchange})")
 				
 		.otherwise()		
-//			.to("{{loanAPI.host}}{{loanAPI.contextPath}}NewLoanApplication?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/NewLoanApplication?bridgeEndpoint=true
-			.to("https://10fdf6f7-766e-44fe-b914-689f040264e9.mock.pstmn.io/api/loan/v1/NewLoanApplication?bridgeEndpoint=true")
+			.to("{{loanAPI.host}}{{loanAPI.contextPath}}NewLoanApplication?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/NewLoanApplication?bridgeEndpoint=true
 		.log("Response Body - ${body}")
 			.choice()
 			
-				.when().jsonpath("$.NewLoanApplicationResponse[?(@.LoanAccountDetails.accountNumber != null && @.LoanAccountDetails.accountNumber != 0)]") // Typechecking backend response if accountNumber is null or 0
+				.when().jsonpath("$.NewLoanApplicationResponse[?(@.LoanAccountDetails.accountNumber != null && @.LoanAccountDetails.accountNumber != '')]") // Typechecking backend response if accountNumber is null or empty
 					.unmarshal(new JacksonDataFormat(NewLoanApplicationResponseBackend.class)) // Converting backend response to json
 					.to("bean:newCustomerLoanApplicationService?method=prepareNewCustomerLoanApplicationResponse") // Converting Backend response to Frontend response
 					.setHeader("Content-Type", constant("application/json"))
 					
 			.otherwise()
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"RECORDNOTFOUND\",\"\",\"\",\"\",\"sysOrAppWithoutBkndError\",${exchange})");
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"RECORDNOTFOUND\",\"\",\"\",\"\",\"sysOrAppWithoutBkndError\",${exchange})")
+		.end();
 		
 	}
 

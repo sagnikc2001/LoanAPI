@@ -1,0 +1,12 @@
+{
+  "GetLoanDetailsRequest": {
+    "CustomerPersonalInfo": {
+      "name": "Sagnik Chakraborty",
+      "phoneNumber": "9753527234",
+      "emailAddress": "sagnik@gmail.com"
+    },
+    "CustomerLoanAccountInfo": {
+      "loanAccountNumber": 0
+    }
+  }
+}
