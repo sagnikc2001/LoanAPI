@@ -42,31 +42,18 @@ public class NewCustomerLoanApplicationRouteBuilder extends RouteBuilder{
 		.marshal(new JacksonDataFormat(NewLoanApplicationRequestBackend.class)) // Marshalling Backend request to json
 		.log("Request Body - ${body}")
 		.choice()
-		
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.fullName == null || @.PersonalDetails.Applicant.fullName == '')]")
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"fullName either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.fullName == null || @.PersonalDetails.Applicant.fullName == '' || @.PersonalDetails.Applicant.phoneNumber == null || @.PersonalDetails.Applicant.phoneNumber == '' || @.PersonalDetails.Applicant.annualSalary == null || @.PersonalDetails.Applicant.annualSalary == 0)]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"PersonalDetails fields not correct\",\"\",\"\",\"validationsCust\",${exchange})")		
 				
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.phoneNumber == null || @.PersonalDetails.Applicant.phoneNumber == '')]")
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"phoneNumber either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")	
-				
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.PersonalDetails.Applicant.annualSalary == null || @.PersonalDetails.Applicant.annualSalary == 0)]")
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"annualSalary either null or 0\",\"\",\"\",\"validationsCust\",${exchange})")		
-				
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.loanAmount == null || @.LoanDetails.loanAmount == 0)]")
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"loanAmount either null or 0\",\"\",\"\",\"validationsCust\",${exchange})")
-				
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.loanType == null || @.LoanDetails.loanType == '')]")
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"loanType either null or empty\",\"\",\"\",\"validationsCust\",${exchange})")	
-				
-			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.creditScore == null || @.LoanDetails.creditScore == 0)]")
-				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"creditScore either null or 0\",\"\",\"\",\"validationsCust\",${exchange})")
+			.when().jsonpath("$.NewLoanApplicationRequest[?(@.LoanDetails.loanAmount == null || @.LoanDetails.loanAmount == 0 || @.LoanDetails.loanType == null || @.LoanDetails.loanType == '' || @.LoanDetails.creditScore == null || @.LoanDetails.creditScore == 0)]")
+				.to("bean:utils?method=prepareFaultNodeStr(\"NewLoanApplicationResponse\",\"INCORRECTVALUE\",\"LoanDetails fields not correct\",\"\",\"\",\"validationsCust\",${exchange})")
 				
 		.otherwise()		
-			.to("{{loanAPI.host}}{{loanAPI.contextPath}}NewLoanApplication?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/NewLoanApplication?bridgeEndpoint=true
+			.to("{{loanAPI.newLoanApplicationHost}}{{loanAPI.newLoanApplicationContextPath}}NewLoanApplication?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/NewLoanApplication?bridgeEndpoint=true
 		.log("Response Body - ${body}")
 			.choice()
 			
-				.when().jsonpath("$.NewLoanApplicationResponse[?(@.LoanAccountDetails.accountNumber != null && @.LoanAccountDetails.accountNumber != '')]") // Typechecking backend response if accountNumber is null or empty
+			.when().jsonpath("$.NewLoanApplicationResponse.LoanAccountDetails[?(@ != null && @.size() > 0)]") // Checking Backend Response is not null
 					.unmarshal(new JacksonDataFormat(NewLoanApplicationResponseBackend.class)) // Converting backend response to json
 					.to("bean:newCustomerLoanApplicationService?method=prepareNewCustomerLoanApplicationResponse") // Converting Backend response to Frontend response
 					.setHeader("Content-Type", constant("application/json"))

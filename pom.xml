@@ -118,6 +118,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>LoanAPI</finalName>
 	</build>
 
 </project>

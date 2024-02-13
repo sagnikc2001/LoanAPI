@@ -53,11 +53,11 @@ public class GetCustomerLoanDetailsRouteBuilder extends RouteBuilder{
 				.to("bean:utils?method=prepareFaultNodeStr(\"GetLoanDetailsResponse\",\"INCORRECTVALUE\",\"accountNumber Field is not correct\",\"\",\"\",\"validationsCust\",${exchange})")
 			
 		.otherwise()	
-			.to("{{loanAPI.host}}{{loanAPI.contextPath}}GetLoanDetails?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/GetLoanDetails?bridgeEndpoint=true
+			.to("{{loanAPI.getCustomerLoanDetailsHost}}{{loanAPI.getCustomerLoanDetailsContextPath}}GetCustomerLoanDetails?bridgeEndpoint=true") // http://localhost:8080/api/loan/v1/GetLoanDetails?bridgeEndpoint=true
 			.log("Response Body - ${body}")
 			.choice()
 			
-			.when().jsonpath("$.GetLoanDetailsResponse.LoanInfo[?(@.accountNumber != null && @.accountNumber != 0)]") // Typechecking if Backend response accountNumber is null or 0
+			.when().jsonpath("$.GetLoanDetailsResponse.LoanInfo[?(@ != null && @.size() > 0)]") // Checking Backend Response is not null
 				.unmarshal(new JacksonDataFormat(GetLoanDetailsResponseBackend.class))	// Converting backend response to json	
 				.to("bean:getCustomerLoanDetailsService?method=prepareGetCustomerLoanDetailsResponse") // Converting Backend response to Frontend response
 				.setHeader("Content-Type", constant("application/json"))

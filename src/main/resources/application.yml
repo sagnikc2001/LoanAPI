@@ -12,5 +12,7 @@ server:
   port: 8081
   
 loanAPI:
-  host : ${LOAN_DB_HOST}
-  contextPath : ${LOAN_DB_CONTEXTPATH}
+  getCustomerLoanDetailsHost : ${LOAN_DB_GET_CUSTOMER_LOAN_DETAILS_HOST}
+  getCustomerLoanDetailsContextPath : ${LOAN_DB_GET_CUSTOMER_LOAN_DETAILS_CONTEXTPATH}
+  newLoanApplicationHost : ${LOAN_DB_NEW_LOAN_APPLICATION_HOST}
+  newLoanApplicationContextPath : ${LOAN_DB_NEW_LOAN_APPLICATION_CONTEXTPATH}

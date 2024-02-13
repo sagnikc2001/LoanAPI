@@ -31,8 +31,8 @@ import com.google.common.io.Resources;
 @SpringBootApplication
 @WebAppConfiguration
 
-@MockEndpointsAndSkip("http://localhost:8080/api/loan/v1/GetLoanDetails.*|http://localhost:8082/api/connector/configstore.*")
-//@MockEndpointsAndSkip("https://9b66fe71-04de-4d62-a371-7b362d126391.mock.pstmn.io/api/customer/v1/GetCustomerLoanDetails.*|http://localhost:8082/api/connector/configstore.*")
+//@MockEndpointsAndSkip("{{loanAPI.getCustomerLoanDetailsHost}}{{loanAPI.getCustomerLoanDetailsContextPath}}GetCustomerLoanDetails.*|{{configStoreConnector.host}}{{configStoreConnector.contextPath}}.*")
+@MockEndpointsAndSkip("https://9b66fe71-04de-4d62-a371-7b362d126391.mock.pstmn.io/api/customer/v1/GetCustomerLoanDetails.*|http:localhost:8082/api/connector/configstore.*")
 
 @UseAdviceWith
 @ImportResource({ "classpath:spring/camel-context.xml" })
@@ -53,7 +53,7 @@ public class GetCustomerLoanDetailsTest {
 	@Autowired
 	ApplicationContext applicationContext;
 
-	@EndpointInject("mock://{{loanAPI.host}}{{loanAPI.contextPath}}GetLoanDetails")
+	@EndpointInject("mock://{{loanAPI.getCustomerLoanDetailsHost}}{{loanAPI.getCustomerLoanDetailsContextPath}}GetCustomerLoanDetails")
 	private MockEndpoint cdmockEndpoint;
 
 //    @EndpointInject("mock://https:9b66fe71-04de-4d62-a371-7b362d126391.mock.pstmn.io/api/customer/v1/GetCustomerLoanDetails")
@@ -104,9 +104,7 @@ public class GetCustomerLoanDetailsTest {
 
 		GetCustomerLoanDetailsResponseType oGetCustomerLoanDetailsResponseType = producerTemplate.requestBody(
 				"direct:getCustomerLoanDetails", oGetCustomerLoanDetailsRequestType,
-				GetCustomerLoanDetailsResponseType.class); // String oGetCustomerLoanDetailsResponseType = (String)
-															// producerTemplate.requestBody("direct:getCustomerLoanDetails",
-															// oGetCustomerLoanDetailsRequestType);
+				GetCustomerLoanDetailsResponseType.class);
 
 		System.out.println("Response:" + oGetCustomerLoanDetailsResponseType.getGetLoanDetailsResponse()
 				.getCustomerLoanInfo().getLoanAccountNumber().toString());
@@ -157,6 +155,8 @@ public class GetCustomerLoanDetailsTest {
 
 		String faultResponse = producerTemplate.requestBody("direct:getCustomerLoanDetails",
 				oGetCustomerLoanDetailsRequestType, String.class);
+		
+		System.out.println(faultResponse);
 
 		Assertions.assertTrue(faultResponse.contains("Record not found"));
 	}

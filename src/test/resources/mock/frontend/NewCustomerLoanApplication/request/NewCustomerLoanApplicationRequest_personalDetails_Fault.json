@@ -1,7 +1,7 @@
 {
   "NewLoanApplicationRequest": {
     "ApplicantDetails": {
-      "name": "Sagnik Chakraborty",
+      "name": "",
       "Address": {
         "locality": "Sector 5",
         "city": "New Panvel",
@@ -11,7 +11,7 @@
       },
       "phoneNumber": "",
       "emailAddress": "sagnik@gmail.com",
-      "annualIncome": 400000
+      "annualIncome": 0
     },
     "ApplicantLoanDetails": {
       "loanAmount": 600000,

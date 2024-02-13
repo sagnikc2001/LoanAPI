@@ -16,8 +16,8 @@
     "ApplicantLoanDetails": {
       "loanAmount": 0,
       "loanTermMonths": 24,
-      "loanType": "Personal",
-      "creditScore": 750
+      "loanType": "",
+      "creditScore": 0
     }
   }
 }
